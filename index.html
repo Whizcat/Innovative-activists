@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: goldenrod;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+  </head>
+<body class="w3-brown">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="images.jpeg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#Search" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-search w3-xxlarge"></i>
+    <p>SEARCH</p>
+  </a>
+
+  <a href="#Login" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>LOGIN</p>
+  </a>
+  <a href="#Team" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>TEAM</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-grey w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">NSFAS</span> Innovation activists</h1>
+    <p>Bringing unprecedented Block-chain solutions for all NSFAS problems !</p>
+    <img src="RAU.jpg"   alt="boy" class="w3-image" width="100%;" height="500;">
+    <img src="Greathall.jpg" alt="boy" class="w3-image" width="100%;" height="500;">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justified w3-text-white w3-padding-64" id="about">
+    <h2 class="w3-text-light-gold"> Who we are.</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>We are a small group of student specialists who are based in Auckland Park. We are revolutionizing our funds as students. Block-chain is our number
+      one priority to leverage AI technology to solve the source problem embedded in the nationwide fees-must-fall protests. As a result,
+      we aim to trnasform the landscape of ledger transaction in NSFAS in order to respond to students demands and concerns. 
+    </p>
+    <h3 class=" w3-content w3-text-white"> <u>Value Proposition</u></h3>
+    <div class="col-3 col-s-12">
+      <div class="aside">
+        <h2>Strategy</h2>
+        <p> Using Blockchain technology to monitor and track the movement of students' funds.</p>
+        <h2> Feasibility</h2>
+        <p> Regulate the stability of the ethereum coin to withstand market fluctuation.</p>
+        <h2>Objective</h2>
+        <p>Through smart contracts, face recognition and cybersecurity incident report.</p>
+      </div>
+    </div>
+  </div>
+    
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  img {
+    width: 20%;
+    height: max-content;
+    align-items: first baseline;
+    align-content: center;
+  }
+  
+  .column {
+    float: left;
+    width: 30%;
+    padding: 5%;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  </style>
+  </head>
+  <body>
+
+    
+    <div class="row w3-padding-64 w3-content" ></div>
+    <div class="column"  id="Team"></div>
+    <font size="+4"> Blockchain Software Developers</font>
+    <p> <font size="+3">Your reliable Team from Innovative Activists </p></font>
+      <div class="column"  id="Team">
+        <img src="img_chania.jpg" alt="Snow" style="width:80%;  height:250px;">
+        <b><p>Thizwilondi Prince Makhesha </p></b> 
+        <em><p>Blockchain engineer  (Bcom)</p>  </em>    
+        
+      </div>
+      <div class="column">
+        <img src="img_teb.jpg" alt="Forest" style="width:80%;  height:250px;" >
+        <b><p>Tebogo Mojela        
+        </p></b>
+  <p> <em>Product specialist (Economist)</p></em>
+  
+      </div>
+      <div class="column">
+        <img src="img_thabo.jpg" alt="Mountains" style="width:80%;   height: 250px;">
+        <b><p>Thabo Martins </p></b>
+        <p> <em>Userbility interface specialist
+          B.A Development studies/ Mcom Wits 
+        </p></em>
+      </div>
+    </div>
+
+
+  
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16 w3-text-light-grey"  ></h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom"  id="Login">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Log in details</li>
+          <li class="w3-padding-16">Tertiary application</li>
+          <li class="w3-padding-16">Historical transactions</li>
+          <li class="w3-padding-16">Meta wallet</li>
+          <li class="w3-padding-16"> Face detection</li>
+          <li class="w3-padding-16">
+            <h2> Registration fee</h2>
+            <span class="w3-opacity"> R6000.00 </span>
+          </li>
+          <li class="w3-light-green w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Register Profile</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Financial data analyst</li>
+          <li class="w3-padding-16">Smart contract</li>
+          <li class="w3-padding-16">Classified information</li>
+          <li class="w3-padding-16">Facial recognition</li>
+          <li class="w3-padding-16">Data breaching tracking</li>
+          <li class="w3-padding-16">
+            <h2> Automate updates</h2>
+            <span class="w3-opacity">Mechant payment</span>
+          </li>
+          <li class="w3-green w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Log in as personeel user</button>
+          </li>
+        </ul>
+      </div>
+   
+    
+    
+  
+
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-green" id="contact">
+    <h2 class="w3-text-light-grey">Contact us</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+   
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>011 599 0808 </p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 34 Melrose Boulevard, Melrose Arch 2nd Floor</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: Innovative@activist.org</p>
+    </div><br>
+    <p> <b>Connect with one of our block-chain specialists for services</b></p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-content w3-padding-64 w3-text-green w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+ <p class="w3-small">We are available on all social media platforms: Innovative@activists</p>
+ <a class="w3-button w3-round-xxlarge w3-small w3-light-grey" href="https://www.uj.ac.za/faculties/engineering-the-built-environment/" target="_blank">Start now</a> 
+ <!-- End footer -->
+</footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
