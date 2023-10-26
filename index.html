@@ -15,8 +15,11 @@
     /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
     #main {margin-left: 120px}
     /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    @media only screen and (max-width: 600px) {#main {margin-left: 10;}}
     </style>
+
+
+
   </head>
 <body class="w3-brown">
 
@@ -27,6 +30,7 @@
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
+       
   </a>
   
   <a href="#Search" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
@@ -144,66 +148,103 @@
     </div>
     <div class="w3-half w3-margin-bottom"  id="Login">
     
-    <div class="login-container">
-      <form action="/action_page.php">
-        <input type="text" placeholder="Username" name="username">
-        <input type="text" placeholder="Password" name="psw">
-        <button type="submit">Login</button>
-      </form>
-    </div>
+  
+  <!DOCTYPE html>
+  <html>
+  <style>
+  table,th,td {
+    border : 1px solid black;
+    border-collapse: collapse;
+  }
+  th,td {
+    padding: 5px;
+  }
+  </style>
+  <body>
+  
+    <h2>NSFAS 2023 FUNDING LIST</h2>
+    
+    <form action=""> 
+      <select name="customers" onchange="showCustomer(this.value)">
+        <option value="">Select student :</option>
+        <option value="ALFKI">Onkgopoditse Chepape</option>
+        <option value="NORTS ">Peter Malapane</option>
+        <option value="WOLZA">Bongiwe Khumalo</option>
+        <option value="WOLZA">TTeboho Lehong</option>
+        <option value="WOLZA">Siyabulelwa Nkayise</option>
+        <option value="WOLZA">Amanda Bross</option>
+        <option value="WOLZA">Cytlin Naidoo</option>
+        <option value="WOLZA">Jaden Botes</option>
+        <option value="WOLZA">Aishah-Bintie-Dawood Damon</option>
+        <option value="WOLZA">Zaakirah Khan</option>
+        <option value="WOLZA">Ziyanda Dlamini</option>
+        <option value="WOLZA">Omolemo Diko</option>
+      </select>
+    </form>
+    <br>
+    <div id="txtHint">Customer info will be listed here...</div>
+    
+    <script>
+    function showCustomer(str) {
+      if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+      }
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+      xhttp.open("GET", "getcustomer.php?q="+str);
+      xhttp.send();
+    }
+    </script>
+    <ul>
+  <h1>Student wallet</h1>
+      <li><a href="#user-registration">Student Registration</a></li>
+      <li><a href="#wallet-dashboard">Wallet Dashboard</a></li>
+      <li><a href="#balance-overview">Balance Overview</a></li>
+      <li><a href="#customer-support">Budgeting tools</a></li>
+      <li><a href="#contact-management">Notification</a></li>
+    </ul>
+  
+  </body>
+  </html>
+  <h2> ->$Digital coin</h2>
+  <ul>
+    <li><a href="#user-registration">Verify Applicant</a></li>
+    <li><a href="#wallet-dashboard">Wallet Top up</a></li>
+    <li><a href="#balance-overview">Transaction history</a></li>
+    <li><a href="#customer-support">Vesting period</a></li>
+    <li><a href="#contact-management">Ditigal receipts</a></li>
+  </ul>
+
   </div>
 
- 
   
-    <!-- Grid for metamask wallet -->
-    <h3 class="w3-padding-16 w3-text-light-grey"  ></h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom"  id="Login">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Student Log in details</li>
-          <li class="w3-padding-16">Tertiary application</li>
-          <li class="w3-padding-16">Historical transactions</li>
-          <li class="w3-padding-16">Meta wallet</li>
-          <li class="w3-padding-16"> Face detection</li>
-          <li class="w3-padding-16">
-            <h2> Registration fee</h2>
-            <span class="w3-opacity"> R6000.00 </span>
-          </li>
-          <li class="w3-light-green w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Register Profile</button>
-          </li>
-        </ul>
-      </div>
+  <section id="user-registration">
+    <h2>User Registration</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
 
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Financial data analyst</li>
-          <li class="w3-padding-16">Smart contract</li>
-          <li class="w3-padding-16">Classified information</li>
-          <li class="w3-padding-16">Facial recognition</li>
-          <li class="w3-padding-16">Data breaching tracking</li>
-          <li class="w3-padding-16">
-            <h2> Automate updates</h2>
-            <span class="w3-opacity">Mechant payment</span>
-          </li>
-          <li class="w3-green w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Log in as personeel user</button>
-          </li>
-        </ul>
-      </div>
-   
-    
-    
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+
+      <button type="submit" onclick="registerUser()">Register</button>
+    </form>
+  </section>
+
   
-
-  </div>
+  
+  
 
   <!-- Contact Section -->
   <div class="w3-padding-64 w3-content w3-text-green" id="contact">
     <h2 class="w3-text-light-grey">Contact us</h2>
     <hr style="width:200px" class="w3-opacity">
-
-   
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>011 599 0808 </p>
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 34 Melrose Boulevard, Melrose Arch 2nd Floor</p>
@@ -213,49 +254,9 @@
 <html>
 <body>
 
-<h2>Have a valid email</h2>
 
-<p>Double check the credentials</p>
-<form action="/action_page.php">
-  <label for="email">Enter your email:</label>
-  <input type="email" id="email" name="email">
-  <input type="submit">
-</form>
-
-</body>
-</html>
-
-    <p> <b>Connect with one of our block-chain specialists for services</b></p>
-
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-  <!-- End Contact Section -->
-  </div>
   
-<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-<footer class="w3-content w3-padding-64 w3-text-green w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
- <p class="w3-small">We are available on all social media platforms: Innovative@activists</p>
- <a class="w3-button w3-round-xxlarge w3-small w3-light-grey" href="https://www.uj.ac.za/faculties/engineering-the-built-environment/" target="_blank">Start now</a> 
- <!-- End footer -->
-</footer>
 
-<!-- END PAGE CONTENT -->
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>
